@@ -1,0 +1,90 @@
+body {
+    background: rgb(23, 23, 23);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    background-color: black;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s ease-in-out;
+}
+
+h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 10px;
+    color: #fff;
+}
+
+p {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    background-color: crimson;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: #ff4d4d;
+}
+
+.card:hover .content {
+    opacity: 1; /* Show content on hover */
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+}
