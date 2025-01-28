@@ -1,55 +1,118 @@
-body{
+body {
     margin: 0;
     font-family: sans-serif;
     color: #333;
 }
 
-.image-container{
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    background-color: #717c96;
+    clip-path: circle(20px at calc(100vw - 5vw) 31px);
+    transition: clip-path 0.5s ease-in-out;
+}
+
+.menu li {
+    position: relative;
+    z-index: 5;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.btn {
+    position: absolute;
+    top: 20px;
+    left: calc(100vw - 5vw);
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.btn span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    display: block;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* .highlight {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+    z-index: 4;
+} */
+
+
+.image-container {
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.img{
+.img {
     width: 300px;
     height: 250px;
     margin: 20px;
 }
 
-.img-one{
-    background-image: url(image/mini\ 1.jpg);
+.img-one {
+    background-image: url('image/mini 1.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.img-two{
-    background-image: url(image/mini\ 2.jpg);
+.img-two {
+    background-image: url('image/mini 2.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.container{
+.container {
     padding: 0 5vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-article{
+article {
     padding: 20px 0;
 }
 
-article > h2{
+article h2 {
     text-transform: uppercase;
     font-size: 2rem;
     text-align: center;
 }
 
-.para{
+.para {
     max-width: 700px;
     color: rgb(79, 77, 77);
     padding: 10px;
     text-align: center;
-    line-height: 20px;
+    line-height: 1.6;
 }
