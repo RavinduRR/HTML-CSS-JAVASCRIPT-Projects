@@ -3,7 +3,7 @@ const pages = document.querySelector(".page");
 const toggleBtn = document.querySelector(".toggle-btn");
 const ul = document.querySelector(".nav-list");
 const overlay = document.querySelector(".overlay");
-const link = document.querySelector(".link");
+const links = document.querySelectorAll(".link");
 
 let pageIndex = 0;
 
@@ -19,15 +19,16 @@ links.forEach((item, i) => {
     });
 });
 
-function nextPage(index){
-    overlay.style.animation = `slide 1s linear 1`
-    setTimeout(() => {
-        pages[pageIndex].classList.remove('active')
-        pages[index].classList.add('active')
-        pageIndex = index
-    }, 500)
+function nextPage(index) {
+    overlay.style.animation = `slide 1s linear 1`;
 
     setTimeout(() => {
-        overlay.style.animation = null
-    },1000)
+        pages[pageIndex].classList.remove("active");
+        pages[index].classList.add("active");
+        pageIndex = index;
+    }, 500);
+
+    setTimeout(() => {
+        overlay.style.animation = null;
+    }, 1000);
 }
