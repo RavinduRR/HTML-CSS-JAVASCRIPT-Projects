@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     text-align: center;
     background-color: #ccef;
     height: 100vh;
@@ -14,26 +14,26 @@ body{
     align-items: center;
 }
 
-.container{
+.container {
     padding: 6rem;
     background: black;
 }
 
-.container h2{
+.container h2 {
     color: #fff;
     font-family: sans-serif;
     font-size: 3rem;
     margin-bottom: 40px;
 }
 
-.input-container input{
+.input-container input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     outline: none;
 }
 
-button{
+button {
     padding: 10px 20px;
     font-weight: bold;
     cursor: pointer;
@@ -57,4 +57,20 @@ p {
     margin: auto;
     margin-top: 2rem;
     font-family: sans-serif;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
 }
